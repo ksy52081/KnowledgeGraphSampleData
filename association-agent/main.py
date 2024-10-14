@@ -1,6 +1,7 @@
 from common.util import parse_main_args
 from generator.convergence_data_generator import ConvergenceDataGenerator
 from runner.associatinorule_analysis_runner import AssociationRuleAnalysisRunner
+from runner.association_ruleCF_analysis_runner import AssociationRuleCFRunner
 
 if __name__ == "__main__":
   args = parse_main_args()
@@ -20,4 +21,8 @@ if __name__ == "__main__":
 
   if algorithm == "association-analysis":
     runner = AssociationRuleAnalysisRunner(args)
+    runner.run()
+
+  if algorithm == "association-CF":
+    runner = AssociationRuleCFRunner(args)
     runner.run()
