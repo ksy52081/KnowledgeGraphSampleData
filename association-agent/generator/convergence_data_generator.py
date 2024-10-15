@@ -6,7 +6,7 @@ class ConvergenceDataGenerator:
   def generateDataFrame(self) -> pd.DataFrame:
     # Parameters
     user_ids = [str(i) for i in range(1, 51)]  # userId from "1" to "50"
-    item_ids = [f"Item{i}" for i in range(1, 15)]  # itemId from "Item1" to "Item14"
+    item_ids = [str(i) for i in range(1, 15)]  # itemId from "Item1" to "Item14"
     rows = 100  # Number of rows for the mock data
 
     # Generate mock data
@@ -22,7 +22,7 @@ class ConvergenceDataGenerator:
   def generateDataFrameWithFilePath(self, file_path):
     # Parameters
     user_ids = [str(i) for i in range(1, 51)]  # userId from "1" to "50"
-    item_ids = [f"Item{i}" for i in range(1, 15)]  # itemId from "Item1" to "Item14"
+    item_ids = [str(i) for i in range(1, 15)]  # itemId from "Item1" to "Item14"
     rows = 100  # Number of rows for the mock data
 
     # Generate mock data
